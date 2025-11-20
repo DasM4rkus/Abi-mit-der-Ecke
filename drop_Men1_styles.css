@@ -1,0 +1,201 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+body, .dropdown a {
+    font-family: 'Lilita One', cursive;
+    font-size: 20px;
+}
+.dropdown_events {
+    position: 600px;
+    margin-right: 100;
+}
+
+.topbar {
+    display: flex;
+    background-color: #363636;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    font-size-adjust: 0.8;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    margin-bottom: 100px;
+}
+
+.logo-link {
+    display: block;
+}
+
+.myimage {
+    display: block;
+    border-radius: 2px;
+    max-width: 100px;
+    height: auto;
+    margin: 0;
+}
+
+.dropdown_people,
+.dropdown_events {
+    display: none;
+    position: absolute;
+    background-color: #363636;
+    padding: 10px;
+    list-style: none;
+    border: 2px solid #5f5f5f;
+    box-shadow: 0 2px 5px rgba(223, 122, 122, 0.1);
+    z-index: 1000;
+    border-radius: 5px;
+}
+
+.dropdown li:hover > .dropdown_people,
+.dropdown li:hover > .dropdown_events {
+    display: block;
+}
+
+.dropdown {
+    display: flex;
+    gap: 40px;
+}
+
+.dropdown li {
+    position: relative;
+}
+
+.dropdown a {
+    text-decoration: none;
+    color: #59bafc;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding: 8px 12px;
+    display: block;
+}
+
+.dropdown a:hover {
+    background-color: #cccccc;
+    border: 1px solid #5f5f5f;
+}
+
+ul.dropdown, ul.dropdown_people, ul.dropdown_events {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.img member_arne {
+    height: 20000px;
+}
+
+.team-introduction {
+    padding: 8vh;
+    text-align: center;
+    font-size: 1.3em;
+    border: #363636;
+    background: fixed;
+    background-color: #5c5656;
+}
+
+.names_men {
+    color: #59bafc;
+    font-size: 1.2em;
+    margin: 10px 0 5px 0;
+}
+
+.head_Men {
+    color: #59bafc;
+}
+
+.head_men_body {
+    font-size: 1.2em;
+    color: white;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.member1, .member2, .member3, .member4, 
+.member5, .member6, .member7 {
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+    position: relative;
+    padding: 1;
+}
+
+.member_arne, .member_eric, .member_linus, 
+.member_ben, .member_lennox, .member_ulli, 
+.member_markus {
+    width: 20%;
+    height: auto;
+    border-radius: 10px;
+    top: 20%;
+}
+
+.team-members {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+    justify-items: center;
+    align-items: start;
+    margin: 3rem auto;
+    max-width: 1200px;
+}
+
+.member1, .member2, .member3,
+.member4, .member5, .member6, .member7 {
+    text-align: center;
+    width: 200px;
+}
+
+.member1 img, .member2 img, .member3 img,
+.member4 img, .member5 img, .member6 img, .member7 img {
+    width: 100%;
+    height: 400px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.897);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member1 { grid-row: 2; grid-column: 1; }
+.member2 { grid-row: 1; grid-column: 2; }
+.member3 { grid-row: 1; grid-column: 4; }
+.member4 { grid-row: 2; grid-column: 5; }
+.member5 { grid-row: 3; grid-column: 4; }
+.member6 { grid-row: 3; grid-column: 2; }
+.member7 { grid-row: 2; grid-column: 3; }
+
+@media (max-width: 800px) {
+    .team-members {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .team-members {
+        grid-template-columns: 1fr;
+    }
+}
+
+.background_team {
+    position: relative;
+    width: 90%;
+    min-height: 100vh;
+    overflow: visible;
+    padding-bottom: 200px;
+}
+
+.background_team_img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: blur(2px) brightness(0.5);
+}
